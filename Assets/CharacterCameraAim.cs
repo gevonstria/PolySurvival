@@ -41,6 +41,10 @@ public class CharacterCameraAim : MonoBehaviour
             weapon.StartFiring();
         }
 
+        if(weapon.isFiring){
+            weapon.UpdateFiring(Time.deltaTime);
+        }
+        weapon.UpdateBullets(Time.deltaTime);
         if(Input.GetMouseButtonUp(0)){
             weapon.StopFiring();
         }
